@@ -1,5 +1,21 @@
-void ft_print_reverse_alphabet(void){
-	for(int i = 122; i > 96; i--){
-	       write(1,&i,1);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/21 16:20:35 by isaridas          #+#    #+#             */
+/*   Updated: 2022/07/21 20:02:29 by isaridas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void ft_print_reverse_alphabet(void)
+{
+	int i = 122;
+	while(i > 96)
+	{
+		write(1,&i,1);
+		i--;
 	}
 }	
