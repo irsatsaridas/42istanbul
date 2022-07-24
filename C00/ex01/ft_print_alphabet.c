@@ -6,16 +6,18 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:20:24 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/21 17:59:52 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:36:47 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	int i = 97;
-	while(i < 123)
+	int	i;
+
+	i = 97;
+	while (i < 123)
 	{
-		write(1,&i,1);
+		write(1, &i, 1);
 		i++;
 	}
 }

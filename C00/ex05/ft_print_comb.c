@@ -6,35 +6,35 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:21:38 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/21 19:54:12 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/23 17:18:05 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_print_comb(void)
+#include <unistd.h>
+
+void	ft_print_comb(void)
 {
-	int i = 48;
-	int j = i + 1;
-	int k = j + 1;
-	while(i<58)
+	int	i;
+	int	j;
+	int	k;
+
+	i = 48;
+	while (i < 58)
 	{
-		while(j<58)
+		j = i + 1;
+		while (j < 58)
 		{
-			while(k<58)
-			{
-				if(i<j<k)
-				{
-				write(1,&i,1);
-				write(1,&j,1);
-				write(1,&k,1);
-				write(1,",",2);
-				}
+			k = j + 1;
+			while (k < 58)
+			{	
+				write(1, &i, 1);
+				write(1, &j, 1);
+				write(1, &k, 1);
+				write(1, ", ", 2);
 				k++;
 			}
 			j++;
-			k = j + 1;
 		}
 		i++;
-		j = i + 1;
-		k = j + 1;
 	}
 }

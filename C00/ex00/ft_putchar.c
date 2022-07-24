@@ -6,11 +6,11 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:20:08 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/21 17:58:46 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:31:22 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
-	write(1,&c,1);
+	write(1, &c, 1);
 }

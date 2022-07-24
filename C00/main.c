@@ -1,36 +1,29 @@
 #include <unistd.h>
+#include <stdio.h>
 int main()
 {
-	void ft_print_comb2(void);
-	ft_print_comb2();	
+	void ft_print_combn(int n);
+	ft_print_combn(5);	
 	return 0;
 }
-void ft_print_comb2(void)
+void ft_print_combn(int n)
 {
-    int count1 = 0;
-    int count2 = 0;
-    int first_digit_1 = 0;
-    int first_digit_2 = 0;
-    int second_digit_1 = 0;
-    int second_digit_2 = 0;
-    
-    while(count1 <= 98)
-    {
-        while(count2 <= 99)
-        {
-            first_digit_1 = count1 / 10 + 48;
-            second_digit_1 = count1 % 10 + 48;
-            first_digit_2 = count2 / 10 + 48;
-            second_digit_2 = count2 % 10 + 48;
-            write(1,&first_digit_1,1);
-            write(1,&second_digit_1,1);
-            write(1," ",1);
-            write(1,&first_digit_2,1);
-            write(1,&second_digit_2,1);
-            write(1,", ",2);
-            count2++;
-        }
-        count1++;
-        count2 = count1 + 1;
-    }
+	int log[10] = 0;
+	int original_n = n;
+	int a = 48;
+	while(a < 58)
+	{
+		if(n > 0)
+		{
+			write(1,&a,1);
+			a++;
+			n--;
+		}
+		log
+	}
+	else
+	{
+		write(1,", ",2);
+		n = original_n;
+	}
 }

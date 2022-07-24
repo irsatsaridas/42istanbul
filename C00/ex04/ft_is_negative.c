@@ -6,18 +6,18 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:21:24 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/21 16:21:25 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:39:24 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_is_negative(int n)
+void	ft_is_negative(int n)
 {
-	if(n < 0)
+	if (n < 0)
 	{
-	write(1,"N",1);
+		write(1, "N", 1);
 	}
 	else
 	{
-	write(1,"P",1);
+		write(1, "P", 1);
 	}
 }

@@ -6,16 +6,18 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:21:11 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/21 18:36:45 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:38:49 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_printf_numbers(void)
+void	ft_printf_numbers(void)
 {
-	int i = 48;
-	while(i < 58)
+	int	i;
+
+	i = 48;
+	while (i < 58)
 	{
-		write(1,&i,1);
+		write(1, &i, 1);
 		i++;
 	}
 }
