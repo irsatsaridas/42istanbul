@@ -6,9 +6,11 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:21:11 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/23 15:38:49 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:14:15 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_printf_numbers(void)
 {

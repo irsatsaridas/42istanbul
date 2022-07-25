@@ -6,9 +6,11 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 16:20:08 by isaridas          #+#    #+#             */
-/*   Updated: 2022/07/23 15:31:22 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:13:09 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putchar(char c)
 {
