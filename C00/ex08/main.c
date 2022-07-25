@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 void ft_print_nbs(int n, int* digit);
 void ft_putchar(char c);
@@ -33,10 +33,10 @@ void ft_print_combn(int n)
 	{	
 		if (digit[0] == 10 - n && digit[n - 1] == 9)
 			control = 0;
-		ft_print_nbs(n, digit);  // en son sayýyý yazdýrmayacak
+		ft_print_nbs(n, digit);
 		ft_digit_inc(n, digit);
 		if (control)
-			write(1, ", ", 2); // en son basamaktan sonra virgül yazdýracak
+			write(1, ", ", 2);
 	}
 }
 
