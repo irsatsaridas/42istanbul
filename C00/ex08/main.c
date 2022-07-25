@@ -10,32 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void ft_print_nbs(int n, int *digit);
+void ft_print_nbs(int n, int* digit);
 void ft_putchar(char c);
-void ft_digit_inc(int n, int *digit);
+void ft_digit_inc(int n, int* digit);
 
 void ft_print_combn(int n)
 {
 	int digit[10];
 	int count;
+	int control;
 
 	count = 0;
+	control = 1;
 	while (count < n)
 	{
 		digit[count] = count;
 		count++;
 	}
-	while (digit[0] != 10 - n || digit[n - 1] != 9)
-	{
-		ft_print_nbs(n, digit);  // en son sayÄ±yÄ± yazdÄ±rmayacak
+	while (control)
+	{	
+		if (digit[0] == 10 - n && digit[n - 1] == 9)
+			control = 0;
+		ft_print_nbs(n, digit);  // en son sayýyý yazdýrmayacak
 		ft_digit_inc(n, digit);
-		write(1, ", ", 2); // en son basamaktan sonra virgÃ¼l yazdÄ±racak
+		if (control)
+			write(1, ", ", 2); // en son basamaktan sonra virgül yazdýracak
 	}
 }
 
-void ft_print_nbs(int n, int *digit)
+void ft_print_nbs(int n, int* digit)
 {
 	int count;
 
@@ -52,7 +57,7 @@ void ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void ft_digit_inc(int n, int *digit)
+void ft_digit_inc(int n, int* digit)
 {
 	int element;
 	int max;
@@ -62,18 +67,18 @@ void ft_digit_inc(int n, int *digit)
 	if (digit[n - 1] != 9)
 	{
 		digit[n - 1]++;
-	}		
+	}
 	else if (digit[n - 1] == 9)
 	{
-		while (digit[element] == max) // sondan baÅŸa doÄŸru max olan elementlerden ilerleyerek hangi elementin artÄ±rÄ±labileceÄŸini bulur
+		while (digit[element] == max) // sondan baþa doðru max olan elementlerden ilerleyerek hangi elementin artýrýlabileceðini bulur
 		{
 			max--;
-			element++;
+			element--;
 		}
 		digit[element]++;
 		while (element < n)
 		{
-			digit[element + 1] = digit[element] + 1; // aynÄ± sayÄ±yÄ± iki defa yazmamak adÄ±na arttÄ±rÄ±lan elementten sonraki elementler Ã¶ncekinin bir fazlasÄ± olacak ÅŸekilde baÅŸlar
+			digit[element + 1] = digit[element] + 1; // ayný sayýyý iki defa yazmamak adýna arttýrýlan elementten sonraki elementler öncekinin bir fazlasý olacak þekilde baþlar
 			element++;
 		}
 	}
